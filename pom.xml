@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.baicai.hellojenkins</groupId>
+    <artifactId>hello-jenkins</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.1.RELEASE</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <!--<exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>-->
+        </dependency>
+        <!--<dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>-->
+    </dependencies>
+
+    <build>
+        <!-- 打包名称 -->
+        <finalName>hello-jenkins</finalName>
+        <plugins>
+            <!-- 1.可以使用spring-boot:run这个goal启动
+                 2.启动方式： 在terminal项目根路径，mvn clean tomcat7:run
+                            在eclipse中右键POM文件，maven build中执行tomcat7:run
+                            在IDEA中maven projects中执行tomcat7:run
+                            (java -jar xxx.war不行，没有main函数入口)
+                 3.启动方式4：打成的jar/war,使用java -jar xxx.jar/war启动（否则报no main manifest attribute, in target/xxx.war/jar）
+                 4.但要保证有内置的Tomcat(spring-boot-starter-tomcat) -->
+            <!--<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>-->
+
+            <!-- The Tomcat7 Maven Plugin provides goals to manipulate WAR projects
+                    within the Tomcat servlet container version 7.x
+                 1.可以使用tomcat7:run这个goal启动（3种方式）
+                 2.启动方式： 在terminal项目根路径，mvn clean tomcat7:run
+                            在eclipse中右键POM文件，maven build中执行tomcat7:run
+                            在IDEA中maven projects中执行tomcat7:run
+                            (java -jar xxx.war不行，没有main函数入口)
+                 3.此时需要排除内置的spring-boot-starter-tomcat，否则报错：2 internal calls -->
+            <!--<plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <path>/</path>
+                    <port>8080</port>
+                    <uriEncoding>UTF-8</uriEncoding>
+                    <contextReloadable>true</contextReloadable>
+                </configuration>
+            </plugin>-->
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,21 @@
+# Intellij
+.idea/
+*.iml
+out
+gen
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+logs/
+target/
+
+# Eclipse
+build/
+WebContent/WEB-INF/lib/
+.settings/
+.classpath
+.project
+.metadata
