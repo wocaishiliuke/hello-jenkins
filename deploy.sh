@@ -3,11 +3,11 @@
 
 #需要配置如下参数
 # 项目路径和名称
-export PROJ_PATH=/home/sun/zhouyu/projects
-export PROJ_NAME=hellojenkins
+#export PROJ_PATH=`pwd`
+#export PROJ_NAME=hellojenkins
 
 # 输入你的环境上tomcat的全路径
-export TOMCAT_PATH=/home/sun/zhouyu/apache-tomcat-8.5.33
+#export TOMCAT_PATH=/home/yuzhou/top/apache-tomcat-8.5.33
 
 ### base 函数
 killTomcat()
