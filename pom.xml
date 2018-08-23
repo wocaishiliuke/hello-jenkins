@@ -34,8 +34,8 @@
     </dependencies>
 
     <build>
-        <!-- 打包名称 -->
-        <finalName>hello-jenkins</finalName>
+        <!-- 打包名称，默认=artifactId -->
+        <finalName>hellojenkins</finalName>
         <plugins>
             <!-- 1.可以使用spring-boot:run这个goal启动
                  2.启动方式： 在terminal项目根路径，mvn clean tomcat7:run
