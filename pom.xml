@@ -26,11 +26,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!--<dependency>
+        <!-- 如果上面排除内置spring-boot-starter-tomcat，这里就需要加入servlet依赖 -->
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <scope>provided</scope>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
     <build>
