@@ -26,7 +26,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- 如果上面排除内置spring-boot-starter-tomcat，这里就需要加入servlet依赖 -->
+        <!-- 如果上面排除内置spring-boot-starter-tomcat(其中包含了servlet)，这里就需要加入servlet依赖(否则mvn compile时报错) -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
