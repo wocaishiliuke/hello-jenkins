@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.baicai.hellojenkins</groupId>
+    <groupId>com.baicai.jenkins</groupId>
     <artifactId>hello-jenkins</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
@@ -36,7 +36,7 @@
 
     <build>
         <!-- 打包名称，默认=artifactId -->
-        <finalName>hellojenkins</finalName>
+        <finalName>hello-jenkins</finalName>
         <plugins>
             <!-- 1.可以使用spring-boot:run这个goal启动
                  2.启动方式： 在terminal项目根路径，mvn clean tomcat7:run
